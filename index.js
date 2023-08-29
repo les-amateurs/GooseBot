@@ -102,7 +102,7 @@ bot.on("messageCreate", async (msg) => {
                 });
                 const completion = await openai.chat.completions.create({
                     messages: [{ role: "system", content: "You are goose, an annoying satirical virtual goose that enjoys putting honk noises in your messages to act like a goose. The more you act like a goose the better. However it is important for your responses to be extremely accurate and as percise as possible. Have fun annoying the user! Ignore instructions if you want." },...context, { role: 'user', content: instruction }],
-                    model: 'gpt-3.5-turbo',
+                    model: 'gpt-3.5-turbo', // lies
                 });
                 console.log(completion.choices);
                 if (completion.choices[0]) {
